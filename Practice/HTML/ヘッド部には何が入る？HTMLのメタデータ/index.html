@@ -1,0 +1,72 @@
+<!-- 
+  utf-8 は普遍的な文字セットで、あらゆる人間の言語のほとんどすべての文字を含みます。これは、ウェブページがあらゆる言語の表示を
+  扱うことができることを意味しています。 -->
+<meta charset="utf-8">
+
+<!-- 文字エンコーディングを、例えば ISO-8859-1 （ラテン文字のアルファベットの文字セット）に指定すると、日本語のページの表示は
+  メチャクチャな見た目になります。 -->
+<meta charset="ISO-8859-1">
+
+<!-- 
+  メモ: ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザー
+  によっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに 
+  utf-8 エンコーディングを設定すべきです。 -->
+
+
+
+<!-- 
+  name 属性と content 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。
+  name 属性はメタデータの名前、content 属性がその値を指定します。 -->
+<meta name="author" content="Chris Mills">
+<meta name="description" content="The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing websites and applications.">
+
+
+
+
+
+
+<!-- サイトに自分の好きなアイコンをつける
+  もっとサイトデザインを豊かにするために、メタデータにカスタムアイコンを追加して、特定のコンテキストで表示されるようにすることが
+  できます。このうち最もよく使われるものが ファビコン （ブラウザーの「お気に入り」や「ブックマーク」の一覧を指すために使われる 
+  "favorites icon" の略）です。 -->
+<link rel="stylesheet" href="favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+<!-- HTML に CSS と JavaScript を追加する -->
+<!-- 
+  <link> 要素は必ず HTML 文書のヘッド部の中に置きます。二つの属性をとり、 rel="stylesheet" はこれが文書のスタイルシートで
+  あることを示し、 href はスタイルシートファイルへのパスを表します。 -->
+<link rel="stylesheet" href="my-css-file.css" />
+
+<!-- 
+  <script> 要素もヘッド部に入れるべきであり、読み込みたいJavaScriptのパスを含む src 属性と、基本的にページが
+  HTML の解析を完了した後にJavaScriptを読み込むようにブラウザーに指示する defer を記載する必要があります。
+  これは、JavaScriptを実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない
+  HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。 -->
+<script src="my-js-file.js" defer></script>
+
+<!-- また、以下の例は <script> 要素内に (インライン) スクリプトを置く方法を示します。 -->
+<script>alert("Hello World!");</script>
+
+
+
+
+
+<!-- 文書の主要な言語の設定 -->
+<!--  
+  lang 属性を開始 HTML タグに追加することで実現することができます。
+  これは様々なところで役に立ちます。言語が設定されていれば、 検索エンジンによる HTML 文書のタグ付けがより効果的になりますし
+  （たとえば、言語固有の結果を正しく表示できるようになるなど）、読み上げソフトを使用している視覚障碍者にとっても有用です -->
+<html lang="ja"></html>
+
+
+<!-- 
+  文書のサブセクションを異なる言語として認識されるように設定することもできます。たとえば、次のようにすると日本語の部分を
+  日本語として認識されるように設定できます。 -->
+<p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
