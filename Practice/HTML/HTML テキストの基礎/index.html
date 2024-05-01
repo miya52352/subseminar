@@ -1,0 +1,108 @@
+<!-- 基本・見出しと段落 -->
+
+<p>I am a paragraph, oh yes I am.</p>
+<!-- 段落要素 -->
+
+
+<h1>I am the title of the story.</h1>
+<!-- 見出し要素 -->
+<!-- h1からh6まである -->
+
+
+<span>There is no meaning.</span>
+<!-- 汎用コンテナー -->
+<!-- 何かを表すものではない -->
+
+
+
+
+
+
+<!-- リスト -->
+<ul>
+  milk
+  eggs
+  bread
+  hummus
+</ul>
+<!-- このままだと意味はない -->
+
+
+<!-- 順序なし -->
+<ul>
+  <li>milk</li>
+  <li>eggs</li>
+  <li>bread</li>
+  <li>hummus</li>
+</ul>
+
+
+<ol>
+  <li>milk</li>
+  <li>eggs</li>
+  <li>bread</li>
+  <li>hummus</li>
+</ol>
+
+
+<!-- 入れ子のリスト -->
+<ol>
+  <li>Remove the skin from the garlic, and chop coarsely.</li>
+  <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+  <li>Add all the ingredients into a food processor.</li>
+  <li>
+    Process all the ingredients into a paste.
+    <ul>
+      <li>If you want a coarse "chunky" hummus, process it for a short time. </li>
+      <li>If you want a smooth hummus, process it for a longer time.</li>
+    </ul>
+  </li>
+</ol>
+
+
+
+
+
+
+
+<!-- 強調と重要性 -->
+<!-- 強調 -->
+<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+
+<!-- 純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。
+  その場合は、 <span> 要素と CSS、あるいは <i> を使用してください。 -->
+<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+
+
+
+<!-- 強い重要性 -->
+<p>This liquid is <strong>highly toxic</strong>.</p>
+<p>I am counting on you. <strong>Do not</strong> be late!</p>
+
+
+
+<!-- 必要に応じて、 strong と em を相互に入れ子にすることができます。 -->
+<p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
+
+
+
+
+
+
+
+<!-- イタリック、太字、下線 -->
+<!-- 
+  これまで説明してきた要素には、明確な意味があります。<b>、<i>、<u> の状況はやや複雑です。
+  CSS がまだ十分に対応されていないか、まったく対応されていなかった時代に、太字、斜体、下線付きのテキストを書くことができるように
+  作られたものです。このような要素は表示にのみ影響を与え、意味には影響を与えない表示要素として知られていますが、
+  もはや使用するべきではありません。 -->
+
+  <!-- <strong>、<em>、<mark>、<span> の方が適切ではないかどうか考えてみてください。 -->
+
+<dl>
+  <dt>Semantic HTML</dt>
+  <dd>
+    Use the elements based on their <b>semantic</b> meaning, not their
+    appearance.
+  </dd>
+</dl>

@@ -1,0 +1,117 @@
+<!-- 文書の基本部分 -->
+<!-- 
+  ヘッダー:
+    通常は大きな見出しやロゴの付いた上部の大きな部分。
+  ナビゲーションバー:
+    サイトの主要部分へのリンク。通常はメニューボタン、リンク、またはタブで表されます。
+  メインコンテンツ:
+    中央の大きな領域で、指定されたウェブページの固有の内容のほとんどを含みます。
+    例えば、見たい動画、読んでいる本編、見たい地図、ニュースの見出しなどです。
+  サイドバー:
+    いくつかの周辺情報、リンク、引用、広告など。
+  フッター:
+    通常、注意事項、著作権表示、連絡先情報が含まれているページの下部にある部分。 
+-->
+
+
+<!-- 
+  ヘッダー: <header>
+  ナビゲーションバー： <nav>
+  メインコンテンツ: <main>
+    <article>, <section>, <div>などを含む
+  サイドバー: <aside>
+  フッター: <footer>
+-->
+
+
+
+
+
+
+
+
+
+
+<!-- 意味的ではないラッパー -->
+<!-- 
+  <span> はインラインの非意味的要素です。コンテンツをラップするより良い意味的なテキスト要素が思いつかないか、
+  または特定の意味を加えたくない場合にだけ使うべきです。 -->
+<p>
+  The King walked drunkenly back to his room at 01:00, the beer doing nothing to
+  aid him as he staggered through the door.
+  <span class="editor-note">
+    [Editor's note: At this point in the play, the lights should be down low].
+  </span>
+</p>
+
+<!-- 
+  <div> はブロックレベルの非意味的要素であり、使用するセマンティックブロック要素を考えない場合、
+    または特定の意味を追加したくない場合にのみ使用してください。 -->
+<div class="shopping-cart">
+  <h2>Shopping cart</h2>
+  <ul>
+    <li>
+      <p>
+        <a href=""><strong>Silver earrings</strong></a>: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
+    </li>
+    <li>…</li>
+  </ul>
+  <p>Total cost: $237.89</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 改行と水平線 -->
+<!-- <br>: 改行要素 -->
+<!-- 
+  <br> は段落内に改行を生成します。郵便物の宛先や 詩のように、修正された短い行を連続させたい場面で、
+  硬直した構造を強制する唯一の方法です。 
+  br: break
+-->
+<p>
+  There once was a man named O'Dell<br />
+  Who loved to write HTML<br />
+  But his structure was bad, his semantics were sad<br />
+  and his markup didn't read very well.
+</p>
+  
+
+<!-- <hr>: 主題分割要素 -->
+<!--
+  <hr> 要素は、テキストの主題の変更（トピックやシーンの変更など）を示す水平方向の罫線を文書に作成します。
+  hr: horizontal rule
+ -->
+<p>
+  Ron was backed into a corner by the marauding netherbeasts. Scared, but
+  determined to protect his friends, he raised his wand and prepared to do
+  battle, hoping that his distress call had made it through.
+</p>
+<hr />
+<p>
+  Meanwhile, Harry was sitting at home, staring at his royalty statement and
+  pondering when the next spin off series would come out, when an enchanted
+  distress letter flew through his window and landed in his lap. He read it
+  hazily and sighed; "better get back to work then", he mused.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 簡単なウェブサイトを計画する -->
+<!-- https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->

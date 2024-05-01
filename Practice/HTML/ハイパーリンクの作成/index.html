@@ -1,0 +1,165 @@
+<!-- 基本的なリンク -->
+<p>
+  <a href="https://www.mozilla.org/ja/">Mozilla ホームページ</a
+  >へのリンクを作成しています。
+</p>
+
+
+
+
+
+
+
+
+<!-- ブロックレベルリンク -->
+<!-- <a>要素で囲める -->
+<a href="https://developer.mozilla.org/ja/">
+  <h1>MDN Web Docs</h1>
+</a>
+<p>2005 年から CSS、HTML、JavaScript などのウェブ技術を文書化しています。</p>
+
+
+
+
+
+
+
+
+<!-- 画像リンク -->
+<a href="https://delicious-in-dungeon.com/">
+  <img src="../../../Images/Delicious_in_Dungeon_Vol1.jpg" alt="MDN Web Docs ホームページ" />
+</a>
+
+
+
+
+
+
+
+
+<!-- title 属性による補足情報の追加 -->
+<!-- リンクの上にマウスを当てると、タイトルがツールチップとして表示されます。 -->
+<p>
+  <a
+    href="https://www.mozilla.org/ja/"
+    title="Mozilla の使命と協力方法について調べる最適な場所">
+    Mozilla ホームページ</a>へのリンクを作成しています。
+</p>
+
+
+
+
+
+
+
+
+<!-- 文書フラグメント -->
+<p>
+  Want to write us a letter? Use our
+  <a href="index.html#Mailing_address">mailing address</a>.
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2 id="Mailing_address">Mailing address</h2>
+
+<!-- 同じ文書の別の部分にリンクするために、文書フラグメント参照を単独で使用することもできます。 -->
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
+
+
+
+
+
+
+
+
+<!-- 
+  HTML 以外のリソースへのリンク - 明確な道標を示す
+  （PDF や Word 文書のように）ダウンロードを行ったり、（動画や音声のように）ストリーミングを行ったり、
+  （ポップアップウィンドウを開くなど）予期せぬ効果をもたらすリソースにリンクする場合は、混乱を避けるために明確な表現を
+  追加してください。 -->
+<p>
+  <a href="https://www.example.com/large-report.pdf">
+    販売レポートをダウンロード (PDF, 10MB)
+  </a>
+</p>
+
+<p>
+  <a href="https://www.example.com/video-stream/" target="_blank">
+    動画を見る（別なタブで HD 品質のストリーミングが開きます）
+  </a>
+</p>
+
+
+
+
+
+
+
+<!-- ダウンロードへのリンクは download 属性を使う -->
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
+  Download Latest Firefox for Windows (64-bit) (English, US)
+</a>
+
+
+
+
+
+
+
+<!-- メールのリンク -->
+<!--  <a> 要素と mailto: URL スキームを使って行われます。 -->
+<a href="mailto:nowhere@mozilla.org">メールをどこにも送信しません</a>
+
+<!-- 詳細の指定 -->
+<!-- 
+  メールアドレスに加えて、他の情報を提供することができます。実際、提供する mailto URL には標準のメールヘッダーフィールドを
+  追加できます。最も一般的に使用されるのは "subject"、"cc"、"body" です（これは本当のヘッダーフィールドではありませんが
+  新しいメールのための短い内容のメッセージを指定するこができます）。各フィールドとその値は、クエリー用語として指定されています。 -->
+
+  
+<!-- これは cc、bcc、件名、本文を含む例です。 -->
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+  Send mail with cc, bcc, subject and body
+</a>
