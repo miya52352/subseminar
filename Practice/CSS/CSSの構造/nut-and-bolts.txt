@@ -1,0 +1,213 @@
+文書に CSS を適用する方法として
+    外部スタイルシートを使う方法
+    内部スタイルシートを使う方法(非推奨)
+    インラインスタイルを使う方法(可能な限り避けてください)
+の3つの方法がある
+
+
+
+
+
+
+
+詳細度、カスケード
+    2 つのセレクターが同じ HTML 要素を選択するシナリオに遭遇するかもしれません。
+    CSS 言語には、競合が発生した場合にどちらのセレクターが強いかを制御するためのルールがあります。
+    これらのルールはカスケード (cascade) と詳細度 (specificity) と呼ばれています。
+
+
+
+
+    後のスタイルは、それより前のスタイルシートに現れた競合するスタイルを置き換えます。
+    これがカスケードルールです。
+p {
+  color: red;
+}
+
+p {
+  color: blue; こっち適用
+}
+
+
+
+
+    しかし、クラスセレクターと要素セレクターの間に競合がある前の例では、クラスが優先され
+    赤い段落テキストがレンダリングされます。スタイルシートの後方に競合するスタイルが表示されている
+    にもかかわらず、どうしてこのようなことが起こるのでしょうか？クラスは、要素セレクターよりも詳細度
+    が高いことになっており、より具体的であると評価されるので、他の競合するスタイル宣言をキャンセル
+    したのです。
+.special {
+  color: red; こっち適用
+}
+
+p {
+  color: blue;
+}
+
+
+
+
+
+
+
+プロパティと値
+    もっとも基本的なレベルでは、 CSS は 2 つの部品でできています。
+    プロパティ: スタイルに関して変更できる何らかの特徴をあらわす、人間が理解できる識別子です。
+                例えば、 font-size, width, background-color などです。
+    値: 各プロパティには値が割り当てられています。この値は、プロパティをどのようにスタイル付けするかを
+        示します。
+
+    次の例では、一組のプロパティと値を強調表示しています。プロパティ名は color で、値は blue です。
+h1 {
+    color: blue;
+}
+
+    プロパティが値と組み合わせられているとき、この組み合わせを CSS 宣言 (CSS declaration)
+    と呼びます。
+
+
+    警告: プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、
+          宣言が無効なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
+
+
+
+
+
+
+
+
+
+
+
+
+関数
+    calc()
+    transform
+        scale()
+        rotate()
+        translate()
+
+
+
+
+
+
+
+
+
+
+
+アットルール
+    CSS のアットルール は、 CSS が実行すること、またはそれがどのように動作するべきかの指示を
+    提供します。いくつかのアットルールは、キーワードと値だけのシンプルなものです。
+
+    以下の例では、スタイルシートは <body> 要素に既定でピンクの背景を定義しています。しかし、
+    ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリーが続いています。
+body {
+  background-color: pink;
+}
+
+@media (min-width: 30em) {
+  body {
+    background-color: blue;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+一括指定
+    font, background, padding, border, margin のようなプロパティは
+    一括指定プロパティ (shorthand properties) と呼ばれています。
+    これは一括指定プロパティが複数の値を 1 行で設定するからです。
+
+
+    例えば、コードのこの 1 行を見てください。
+padding: 10px 15px 15px 5px;
+
+    これは以下の 4 行のコードと同等です。
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+
+
+    次の 1 行を見てください。
+background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+
+    以下の 5 行と同等です。
+background-color: red;
+background-image: url(bg-graphic.png);
+background-position: 10px 10px;
+background-repeat: repeat-x;
+background-attachment: fixed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ホワイトスペース
+    ホワイトスペースとは、半角スペース、タブ、改行を意味します。ブラウザーが HTML の
+    ホワイトスペースを無視するように、ブラウザーは CSS の中のホワイトスペースを無視します。
+    ホワイトスペースの価値は、読みやすさを向上させるためにあります。
+
+
+body {
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
+
+@media (min-width: 70em) {
+  body {
+    font-size: 130%;
+  }
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+div p,
+#id:first-line {
+  background-color: red;
+  border-radius: 3px;
+}
+
+div p {
+  margin: 0;
+  padding: 1em;
+}
+
+div p + p {
+  padding-top: 0;
+}
+
+    次の例は、同等の CSS をより圧縮したものです。2 つの例は同じように動作しますが
+    下の例の方が読みにくいでしょう。
+body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+@media (min-width: 70em) { body { font-size: 130%;}}
+
+h1 {font-size: 1.5em;}
+
+div p, #id:first-line {background-color: red; border-radius: 3px;}
+div p {margin: 0; padding: 1em;}
+div p + p {padding-top: 0;}
