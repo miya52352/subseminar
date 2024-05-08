@@ -1,0 +1,49 @@
+/* 存在や値のセレクター */
+
+
+/* [attr] */
+/* attrという属性名を持つ要素と一致 */
+/* <a title></a> */
+
+
+
+/* [attr=value] */
+/* attrがvalue と完全一致 */
+/* <a title="value"></a> */
+
+
+
+/* [attr~=value] */
+/* 空白で区切られた属性名の中にvalueを1つ以上含むと一致 */
+/* title="value hello" */
+
+
+
+/* [attr|=value] */
+/* value の直後にハイフンが続く値で始まるattr 属性を持つ要素に一致 */
+/* title="value-hello" */
+
+
+
+/* [attr^=value] */
+/* 値が value で始まるattr属性を持つ要素に一致 */
+/* title="valueABC" */
+/* title="value" */
+/* title="value???" */
+
+
+
+/* [attr$=value] */
+/* 値が value で終わる attr 属性を持つ要素に一致 */
+/* title="ABCvalue" */
+/* title="???value" */
+/* title="value" */
+
+
+
+/* [attr*=value] */
+/* 文字列内の任意の場所に value を含む attr 属性を持つ要素に一致 */
+/* title="ABCvalue" */
+/* title="???value" */
+/* title="???valueABC" */
+/* title="value" */
