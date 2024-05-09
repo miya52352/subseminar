@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  font-style: italic;
+}
+
+
+div.image-section {
+  text-align: center;
+}
+
+
+div.introduction {
+  text-align: center;
+  border: 3px dotted pink;
+  background-color: skyblue;
+}
+
+
+div.introduction p {
+  font-size: 18px;
+}
+
+
+div.recommend-section {
+  padding: 5%;
+}
+
+div.recommend-contents {
+  text-align: center;
+  border: 5px solid purple;
+  background-color: beige;
+}
